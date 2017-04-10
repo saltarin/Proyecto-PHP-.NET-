@@ -1,0 +1,99 @@
+﻿@model IEnumerable<EmployeesApp.Models.Employee>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Listado de Empleados</h2>
+
+<br />
+
+<div class="row">
+    <div class="col-lg-4 col-lg-offset-7">
+        <form class="form-inline">
+            <div class="row">
+                <div class="input-group">
+                    <input type="text" class="form-control" placeholder="Email" name="email" id="txtEmail">
+                    <span class="input-group-btn">
+                        <button class="btn btn-secondary" type="button" id="btnBuscar"><span class="glyphicon glyphicon glyphicon-search"></span></button>
+                    </span>
+                </div>
+            </div>
+        </form>
+    </div>
+</div>
+
+<br />
+
+<div id="frmContenido" class="row">
+    <div class="col-lg-8 col-lg-offset-2">
+
+        <div class="panel panel-default">
+            <table class="table table-hover">
+                <thead class="thead-inverse">
+                    <tr>
+                        <th>
+                            @Html.DisplayNameFor(model => model.name)
+                        </th>
+                        <th>
+                            @Html.DisplayNameFor(model => model.email)
+                        </th>
+                        <th>
+                            @Html.DisplayNameFor(model => model.salary)
+                        </th>
+                        <th>
+                            @Html.DisplayNameFor(model => model.position)
+                        </th>
+                        <th></th>
+                    </tr>
+                </thead>
+
+                <tbody>
+                    @foreach (var item in Model)
+            {
+                        <tr>
+                            <td>
+                                @Html.DisplayFor(modelItem => item.name)
+                            </td>
+                            <td>
+                                @Html.DisplayFor(modelItem => item.email)
+                            </td>
+                            <td>
+                                @Html.DisplayFor(modelItem => item.position)
+                            </td>
+                            <td>
+                                @Html.DisplayFor(modelItem => item.salary)
+                            </td>
+                            <td>
+                                @Html.ActionLink("Details", "Show", new { id = item.id })
+                            </td>
+                        </tr>
+                    }
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
+
+
+@section scripts{
+
+    <script>
+
+        $("#btnBuscar").ready(function (e) {
+
+            $("#btnBuscar").click(function () {
+
+                var email = $("#txtEmail").val();
+                var url = '@Url.Action("BuscarEmpleado", "Employee")';
+                var param = {
+
+                    "email" : email
+                };
+                $.get(url, param, function (data) {
+                    $("#frmContenido").html(data);
+                });
+            });
+        });
+    </script>
+}

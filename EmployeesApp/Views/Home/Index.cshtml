@@ -1,0 +1,24 @@
+﻿@{
+    ViewBag.Title = "Home Page";
+}
+
+<div class="jumbotron">
+    <h1>Prueba PHP en .NET</h1>
+    <p class="lead">Solucion web para empleados.</p>
+</div>
+
+<div class="row">
+    <div class="col-md-2">
+        
+    </div>
+    <div class="col-md-4">
+        <a href="@Url.Action("Index","Employee")"
+           class="btn btn-primary btn-lg">Consultar Empleados</a>
+    </div>
+    <div class="col-md-4">
+        <a href="@Url.Action("ConsultarServicio","Employee")"
+           class="btn btn-success btn-lg">Consultar Servicio Web</a>
+    </div>
+    <div class="col-md-2">
+    </div>
+</div>

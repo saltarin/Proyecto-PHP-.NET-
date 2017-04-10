@@ -1,0 +1,6 @@
+C:\Users\mako\Desktop\Visual\SolEmployee\Problemas\bin\Debug\Problemas.exe.config
+C:\Users\mako\Desktop\Visual\SolEmployee\Problemas\bin\Debug\Problemas.exe
+C:\Users\mako\Desktop\Visual\SolEmployee\Problemas\bin\Debug\Problemas.pdb
+C:\Users\mako\Desktop\Visual\SolEmployee\Problemas\obj\Debug\Problemas.csprojResolveAssemblyReference.cache
+C:\Users\mako\Desktop\Visual\SolEmployee\Problemas\obj\Debug\Problemas.exe
+C:\Users\mako\Desktop\Visual\SolEmployee\Problemas\obj\Debug\Problemas.pdb

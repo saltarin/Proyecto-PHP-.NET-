@@ -1,0 +1,20 @@
+﻿
+@{
+    ViewBag.Title = "ConsultarServicio";
+}
+
+<h2>ConsultarServicio</h2>
+
+@using (Html.BeginForm("ConsultarServicio", "Employee", FormMethod.Post, new { @class = "form-inline" }))
+{
+    <div class="form-group">
+        <label>Minimo:</label>
+        <input type="text" class="form-control" placeholder="min" name="min">
+    </div>
+    <div class="form-group">
+        <label>Maximo:</label>
+        <input type="text" class="form-control" placeholder="max" name="max">
+    </div>
+    <button type="submit" class="btn btn-default">Consultar XML</button>
+}
+
